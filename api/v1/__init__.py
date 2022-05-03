@@ -23,7 +23,9 @@ api = Api(v1_blueprint,
 
 from .resources.tipo_contas.tipo_conta import api as tipo_contas_ns
 from .resources.tipo_transacoes.tipo_transacao import api as tipo_transacoes_ns
+from .resources.pessoas.pessoa import api as pessoas_ns
 
 
 api.add_namespace(tipo_contas_ns)
 api.add_namespace(tipo_transacoes_ns)
+api.add_namespace(pessoas_ns)
