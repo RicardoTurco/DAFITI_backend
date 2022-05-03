@@ -9,6 +9,21 @@ def set_tipo_transacoes():
     return tipo_transacoes_ref
 
 
+def create_tipo_transacao_dict(tipo_transacao_dict, is_inserting=False):
+
+    tipo_transacao = {}
+
+    if is_inserting:
+        tipo_transacao['_id'] = tipo_transacao_dict.pop('idtipotransacao')
+    else:
+        tipo_transacao['id'] = tipo_transacao_dict.pop('_id')
+
+    tipo_transacao['tipotransacao'] = tipo_transacao_dict['tipotransacao']
+    tipo_transacao['operacao'] = tipo_transacao_dict['operacao']
+
+    return tipo_transacao
+
+
 class TipoTransacoes:
     
     def __init__(self):
@@ -20,11 +35,8 @@ class TipoTransacoes:
 
         all_tipo_transacoes = []
         for doc in tipo_transacoes_ref.find():
-            dc = {}
-            dc['id'] = doc.pop('_id')
-            dc['tipotransacao'] = doc['tipotransacao']
-            dc['operacao'] = doc['operacao']
-            all_tipo_transacoes.append(dc)
+            tipo_transacao = create_tipo_transacao_dict(doc)
+            all_tipo_transacoes.append(tipo_transacao)
 
         return all_tipo_transacoes
 
@@ -35,11 +47,7 @@ class TipoTransacoes:
         try:
             tipo_transacao['idtipotransacao'] = str(uuid.uuid4())
 
-            tipo_transacao_json = {
-                "_id": tipo_transacao.get('idtipotransacao'),
-                "tipotransacao": tipo_transacao.get('tipotransacao'),
-                "operacao": tipo_transacao.get('operacao')
-            }
+            tipo_transacao_json = create_tipo_transacao_dict(tipo_transacao, True)
 
             tipo_transacoes_ref.insert_one(tipo_transacao_json)
         except Exception as e:
@@ -56,9 +64,7 @@ class TipoTransacoes:
 
         tipo_transacao = {}
         if tipo_transacao_ret:
-            tipo_transacao['id'] = tipo_transacao_ret.pop('_id')
-            tipo_transacao['tipotransacao'] = tipo_transacao_ret['tipotransacao']
-            tipo_transacao['operacao'] = tipo_transacao_ret['operacao']
+            tipo_transacao = create_tipo_transacao_dict(tipo_transacao_ret)
 
         return tipo_transacao
 
