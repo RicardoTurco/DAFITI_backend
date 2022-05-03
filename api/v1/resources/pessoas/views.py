@@ -20,7 +20,7 @@ def date_in(date):
 def exist_pessoa(username, cpf):
     pessoas_ref = set_pessoas()
 
-    pessoa = pessoas_ref.find({'username': username, 'cpf': cpf}, {})
+    pessoa = pessoas_ref.find_one({'username': username, 'cpf': cpf}, {})
     if pessoa:
         return True
     return False
