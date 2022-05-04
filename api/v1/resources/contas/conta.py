@@ -75,21 +75,21 @@ class InactiveAccounts(Resource):
 
 
 @api.route('/idpessoa/<string:idpessoa>')
-class ContaUsername(Resource):
+class ContaIdpessoa(Resource):
 
     @api.marshal_list_with(conta_all)
     @api.doc(responses={
         200: 'OK',
-        404: 'Conta not found',
+        404: 'Pessoa not have contas',
         500: 'Internal Server Error'
-    }, params={'username': 'Pessoa Username'})
+    }, params={'idpessoa': 'Pessoa ID'})
     def get(self, idpessoa):
         """
         Get all contas of Pessoa(idpessoa)
         """
         contas = Contas.get_all_contas_params(idpessoa=idpessoa)
         if not contas:
-            api.abort(404, 'Conta not found')
+            api.abort(404, 'Pessoa not have contas')
         return contas, 200
 
 
