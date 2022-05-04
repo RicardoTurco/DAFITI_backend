@@ -106,6 +106,20 @@ The project structure is based on the official [Scaling your project](https://fl
 │   ├── __init__.py
 ├── imgs
 │   ├── images files
+├── tests
+│     ├── app
+│     │    └── v1
+│     │    │   └── resources
+│     │    │   │     ├── __init__.py
+│     │    │   │     ├── test_contas.py
+│     │    │   │     ├── test_pessoas.py
+│     │    │   │     ├── test_tipo_contas.py
+│     │    │   │     ├── test_tipo_transacoes.py
+│     │    │   │     ├── test_transacoes.py
+│     │    │   ├── __init__.py
+│     │    ├── __init__.py
+│     ├── __init__.py
+│     ├── conftest.py
 ├── .gitignore
 ├── config.py
 ├── DAFITI_backend.postman_collection.json
@@ -121,17 +135,33 @@ The project structure is based on the official [Scaling your project](https://fl
 * `api/v1` - Resource agroupment for all `v1` [Namespaces](https://flask-restplus.readthedocs.io/en/stable/scaling.html#multiple-namespaces).
 * `api/v1/resources` - All `v1` resources are implemented here.
 * `imgs` - All images files of API project/documentation.
+* `tests`- All tests of API project.
 
 ### Files
 
 * `api/__init__.py` - The Flask Application factory (`create_app()`) and it's configuration are done here. Your [Blueprints](https://flask-restplus.readthedocs.io/en/stable/scaling.html#use-with-blueprints) are registered here.
 * `api/v1/__init__.py` - The Flask RESTPlus API is created here with the versioned Blueprint (e.g `v1`). Your [Namespaces](https://flask-restplus.readthedocs.io/en/stable/scaling.html#multiple-namespaces) are registered here.
+* `tests/conftest.py` - Configurations of tests.
 * `.gitignore` - Lists files and directories which should not be added to git repository.
 * `config.py` - Config file for envs, global config vars and so on. 
 * `DAFITI_backend.postman_collection.json` - File to import in Postman.
 * `README.md` - Instructions and informations of this "challenge".
 * `requirements.txt` - All project dependencies.
 * `run.py` - The Application entrypoint.
+
+### Tests
+
+Is used `PYTEST` to make tests of API.
+
+<b>NOTE:</b> to run tests, if necessary data in Database (MongoDB).
+
+`python -m pytest -v tests/` to run ALL tests in project.
+
+To run an specific test:  
+( `python -m pytest -v <path_to_file>/file_of_test.py::<class_of_test>::<test_to_run>` )
+
+Example:  
+`python -m pytest -v tests/app/v1/resources/test_tipo_contas.py::TestTipoContaId::test_can_get_tipo_conta_by_id`
 
 ### API Versioning
 
