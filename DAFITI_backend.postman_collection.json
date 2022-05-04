@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "035de875-19c3-44df-8688-f55a3b6ffba0",
+		"name": "DAFITI_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tipo-contas",
+			"item": [
+				{
+					"name": "Add Tipo Conta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoconta\": \"TESTE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tipo-contas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-contas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Tipo Contas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-contas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-contas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tipo Conta by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-contas/id/3369e9ce-823e-4f39-965b-b9e7e0ed7ce1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-contas",
+								"id",
+								"3369e9ce-823e-4f39-965b-b9e7e0ed7ce1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tipo Conta by Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-contas/nome/Poupanca",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-contas",
+								"nome",
+								"Poupanca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tipo Conta by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoconta\": \"Poupanca\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tipo-contas/id/f7ea0c09-cf8c-4412-8eeb-9c08e8a01bb1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-contas",
+								"id",
+								"f7ea0c09-cf8c-4412-8eeb-9c08e8a01bb1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tipo Conta by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-contas/id/3757ee0e-f2a7-47e6-80ef-01e4f793d9fe",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-contas",
+								"id",
+								"3757ee0e-f2a7-47e6-80ef-01e4f793d9fe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tipo-transacoes",
+			"item": [
+				{
+					"name": "Add Tipo Transacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipotransacao\": \"Credito\",\n    \"operacao\": \"C\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tipo-transacoes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Tipo Transacoes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-transacoes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tipo Transacao by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-transacoes/id/db704ad4-eb4e-4c0a-8400-bc7f7a89c5f8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-transacoes",
+								"id",
+								"db704ad4-eb4e-4c0a-8400-bc7f7a89c5f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tipo Transacao by Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-transacoes/nome/Debito",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-transacoes",
+								"nome",
+								"Debito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tipo Transacao by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipotransacao\": \"TESTE2\",\n    \"operacao\": \"D\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tipo-transacoes/id/b008ebb2-d55a-4a48-ae09-fd8a618ed922",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-transacoes",
+								"id",
+								"b008ebb2-d55a-4a48-ae09-fd8a618ed922"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tipo Transacao by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tipo-transacoes/id/b008ebb2-d55a-4a48-ae09-fd8a618ed922",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tipo-transacoes",
+								"id",
+								"b008ebb2-d55a-4a48-ae09-fd8a618ed922"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pessoas",
+			"item": [
+				{
+					"name": "Add Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Bianca Dutra dos Santos\",\n\t\"cpf\": \"99999999999\",\n\t\"datanascimento\": \"14/06/2014\",\n\t\"username\": \"bianca\",\n\t\"email\": \"bianca@gmail.com\",\n\t\"password\": \"senhabianca\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pessoas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pessoa by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pessoas/id/6053e98a-de73-47e7-ae1e-3693116de3ed",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"id",
+								"6053e98a-de73-47e7-ae1e-3693116de3ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pessoa by username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pessoas/username/ricturco",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"username",
+								"ricturco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pessoa by cpf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pessoas/cpf/99999999999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"cpf",
+								"99999999999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pessoa by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Joice Denise Dutra 22\",\n\t\"cpf\": \"22222222\",\n\t\"datanascimento\": \"05/02/1984\",\n\t\"username\": \"joice2\",\n\t\"email\": \"joice2@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas/id/d1ddf3b1-8c1b-4e00-8e5b-0a574c41af8c",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"id",
+								"d1ddf3b1-8c1b-4e00-8e5b-0a574c41af8c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pessoa by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pessoas/id/41de4df0-8594-48fb-bb99-d76ca74f5fb2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"id",
+								"41de4df0-8594-48fb-bb99-d76ca74f5fb2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contas",
+			"item": [
+				{
+					"name": "Add Conta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idpessoa\": \"7ad57fd7-3aa5-4137-a3cf-88977e71e1a6\",\n\t\"limitesaquediario\": 250.00,\n\t\"idtipoconta\": \"f7ea0c09-cf8c-4412-8eeb-9c08e8a01bb1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/contas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Contas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conta by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/id/f1c7dc2d-b0da-4c25-82ed-df8eabe38443",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"id",
+								"f1c7dc2d-b0da-4c25-82ed-df8eabe38443"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Contas of pessoa by IDpessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/idpessoa/7ad57fd7-3aa5-4137-a3cf-88977e71e1a6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"idpessoa",
+								"7ad57fd7-3aa5-4137-a3cf-88977e71e1a6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Contas ATIVAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/active-accounts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"active-accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Contas INATIVAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/inactive-accounts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"inactive-accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INACTIVATE Conta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/id/e116d47c-a593-4379-acce-a7633eeb6785/inactivate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"id",
+								"e116d47c-a593-4379-acce-a7633eeb6785",
+								"inactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTIVATE Conta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/id/e116d47c-a593-4379-acce-a7633eeb6785/activate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"id",
+								"e116d47c-a593-4379-acce-a7633eeb6785",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Conta by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/contas/id/9b923ef6-72a7-47c9-8d3e-005ba1f781e6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contas",
+								"id",
+								"9b923ef6-72a7-47c9-8d3e-005ba1f781e6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transacoes",
+			"item": [
+				{
+					"name": "Add Transacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idconta\": \"32abf0a2-3f8e-4b0d-a0ea-6c14fc952dc9\",\n\t\"valor\": 5.00,\n\t\"idtipotransacao\": \"db704ad4-eb4e-4c0a-8400-bc7f7a89c5f8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/transacoes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Transacoes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transacoes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transacao by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transacoes/id/457494ae-5787-4a95-b9d3-20b120e7c48d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transacoes",
+								"id",
+								"457494ae-5787-4a95-b9d3-20b120e7c48d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Transacoes of conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transacoes/conta/e116d47c-a593-4379-acce-a7633eeb6785",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transacoes",
+								"conta",
+								"e116d47c-a593-4379-acce-a7633eeb6785"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transacao by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transacoes/id/e60cf693-dcd4-473e-9583-78811842172a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transacoes",
+								"id",
+								"e60cf693-dcd4-473e-9583-78811842172a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ALL Transacoes of conta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transacoes/conta/32abf0a2-3f8e-4b0d-a0ea-6c14fc952dc9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transacoes",
+								"conta",
+								"32abf0a2-3f8e-4b0d-a0ea-6c14fc952dc9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
