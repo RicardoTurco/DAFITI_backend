@@ -16,6 +16,9 @@ To install and execution the API in your local machine, you will need to:
 ```
 git clone https://github.com/RicardoTurco/DAFITI_backend.git && cd DAFITI_backend
 
+Checkout to DEVELOP branch
+(git checkout develop)
+
 Create and activate one "virtualenv"
 (using any valid form) 
 
